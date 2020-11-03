@@ -1,0 +1,23 @@
+﻿<Properties StartupConfiguration="{622953CB-D4C2-B44C-F8C3-43F19689042F}|">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyManager.cs">
+    <Files>
+      <File FileName="Assets/Scripts/MIyukiManager.cs" Line="42" Column="23" />
+      <File FileName="Assets/Scripts/EnemyManager.cs" Line="8" Column="23" />
+      <File FileName="Assets/Scripts/GameCount.cs" Line="27" Column="25" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Sothusei" expanded="True" selected="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="f9c3bf5d-9a8c-45ef-b99f-226c27b8835c" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
