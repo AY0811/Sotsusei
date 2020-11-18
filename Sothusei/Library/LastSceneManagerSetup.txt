@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Spring/Spring.unity
+- path: Assets/Scenes/Kakuto.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

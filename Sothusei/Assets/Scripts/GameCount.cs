@@ -32,11 +32,13 @@ public class GameCount : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /**
         if (Input.GetKeyDown(KeyCode.Space))
         { count++;
             textField.text = count + "回";
             Debug.Log("増えたよ");
         }
+        */
         //　制限時間が0秒以下なら何もしない
         if (totalTime <= 0f)
         {
@@ -61,6 +63,13 @@ public class GameCount : MonoBehaviour
         {
             Debug.Log("制限時間終了");
         }
+    }
+
+    public void countUp()
+    {
+        count++;
+        textField.text = count + "回";
+        Debug.Log("増えたよ");
     }
 
 }
