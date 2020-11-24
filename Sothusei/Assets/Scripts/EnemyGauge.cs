@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
 
 public class EnemyGauge : MonoBehaviour
 {
@@ -15,10 +16,14 @@ public class EnemyGauge : MonoBehaviour
     private EnemyManager enemy;
     private Tween redGaugeTween;
 
-    public void GaugeReduction(float reducationValue, float time = 1f)
+    public void GaugeReduction(float reducationValue, float time =  0.5f)
     {
-        var valueFrom = enemy.life / enemy.maxLife;
-        var valueTo = (enemy.life - reducationValue) / enemy.maxLife;
+        float valueFrom = (float)enemy.life / (float)enemy.maxLife;
+        float valueTo = ((float)enemy.life - reducationValue) / enemy.maxLife;
+
+        //Debug.Log("GaugeReduction");
+        //Debug.Log(valueFrom);
+        //Debug.Log(valueTo);
 
         // 黄色ゲージ減少
         yellowGauge.fillAmount = valueTo;
@@ -43,8 +48,4 @@ public class EnemyGauge : MonoBehaviour
     {
         this.enemy = enemy;
     }
-}
-
-internal class Tween
-{
 }

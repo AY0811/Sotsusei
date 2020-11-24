@@ -19,6 +19,11 @@ public class EnemyManager : MonoBehaviour
 
     protected EnemyGauge enemyGauge;
 
+    public Transform attackPoint;
+    public float attackRadius;
+    public float attackTime = 0;
+    bool hitplayer = false;
+    public LayerMask playerLayer;
 
     // Start is called before the first frame update
     void Start()
@@ -39,27 +44,16 @@ public class EnemyManager : MonoBehaviour
 
     }
 
-    public void OnDamage(int damage)
-    {
-        hp -= damage;
-        animator.SetTrigger("IsHurt");
-        if (hp <= 0)
-        {
-            Die();
-        }
-    }
-
-    void Die()
-
-   {
-        hp = 0;
-        animator.SetTrigger("Die");
-   }
-
 
     // Update is called once per frame
     void Update()
     {
+        /**if (Input.GetKeyDown(KeyCode.Return))
+        {
+            OnAttack();
+            Debug.Log("布団攻撃");
+        }*/
+
         if (playerObject.transform.position.x < gameObject.transform.position.x)
         {
             gameObject.transform.localScale = leftScale;
@@ -75,11 +69,13 @@ public class EnemyManager : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(Random.Range(jumpWaitMin, jumpWaitMax));
+            OnAttack();
 
             if (playerObject.transform.position.x < gameObject.transform.position.x)
             {
                 // animator.SetTrigger("Jump");
                 gameObject.GetComponent<Rigidbody2D>().AddForce(Vector2.up * upForce + Vector2.right * xForce * -1.0f);
+                
             }
             else
             {
@@ -94,6 +90,62 @@ public class EnemyManager : MonoBehaviour
     {
         enemyGauge.GaugeReduction(power);
         life -= power;
+
+        animator.SetTrigger("IsHurt");
+
+        if (life < 0.0f)
+        {
+            Die();
+        }
     }
 
+    void Die()
+
+    {
+        hp = 0;
+        animator.SetTrigger("Die");
+    }
+
+    void OnAttack()
+    {
+
+        if (hitplayer)
+        {
+            animator.SetTrigger("EnAttack");
+            Collider2D[] hitPlayers = Physics2D.OverlapCircleAll(attackPoint.position, attackRadius, playerLayer);
+            foreach (Collider2D hitPlayer in hitPlayers)
+            {
+                int at = 1;
+                //Debug.Log(hitPlayer.gameObject.name + "に攻撃できたよ");
+                hitPlayer.GetComponent<MiyukiManager>().OnDamege(at);
+            }
+        }
+
+
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "miyuki01")
+        {
+            hitplayer = true;
+        }
+
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        // Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "miyuki01")
+        {
+            hitplayer = false;
+        }
+    }
 }

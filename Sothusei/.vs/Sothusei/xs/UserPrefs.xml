@@ -1,22 +1,35 @@
 ﻿<Properties StartupConfiguration="{622953CB-D4C2-B44C-F8C3-43F19689042F}|">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/EnemyGauge.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LifeGauge.cs">
     <Files>
-      <File FileName="Assets/Scripts/MIyukiManager.cs" Line="94" Column="48" />
-      <File FileName="Assets/Scripts/EnemyManager.cs" Line="95" Column="14" />
-      <File FileName="Assets/Scripts/GameCount.cs" Line="18" Column="30" />
-      <File FileName="Assets/Scripts/EnemyGauge.cs" Line="25" Column="1" />
+      <File FileName="Assets/Scripts/MIyukiManager.cs" Line="82" Column="31" />
+      <File FileName="Assets/Scripts/EnemyManager.cs" Line="94" Column="9" />
+      <File FileName="Assets/Scripts/HeartGauge.cs" Line="5" Column="18" />
+      <File FileName="Assets/Scripts/EnemyGauge.cs" Line="28" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="Sothusei" expanded="True" selected="True" />
+          <Node name="Sothusei" expanded="True">
+            <Node name="Assets" expanded="True">
+              <Node name="Scripts" expanded="True">
+                <Node name="LifeGauge.cs" selected="True" />
+              </Node>
+              <Node name="SimpleMusicGame-master" expanded="True">
+                <Node name="Assets" expanded="True">
+                  <Node name="MusicEffectPack" expanded="True">
+                    <Node name="Scripts" expanded="True" />
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="db7ff5de-10f6-41a4-b978-df65e1b688a5" />
+  <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="304ae7e9-e099-4761-bd23-1d8d342aece5" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

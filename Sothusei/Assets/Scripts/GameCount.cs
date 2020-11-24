@@ -69,7 +69,7 @@ public class GameCount : MonoBehaviour
     {
         count++;
         textField.text = count + "回";
-        Debug.Log("増えたよ");
+        //Debug.Log("増えたよ");
     }
 
 }
