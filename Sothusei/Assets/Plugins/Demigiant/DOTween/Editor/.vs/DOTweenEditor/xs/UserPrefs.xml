@@ -1,0 +1,22 @@
+﻿<Properties StartupConfiguration="{856DA59B-A892-4A7E-AD74-56424708A88B}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="DOTweenEditor" expanded="True">
+            <Node name="DOTweenEditor" expanded="True">
+              <Node name="D:\DG\_Develop\__UNITY3_CLASSES\_Holoville\__DOTween\_DOTween.Assembly\DOTweenEditor\UI\DOTweenComponentInspector.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Default" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.DOTweenEditor PreferredExecutionTarget="MonoDevelop.Default" />
+</Properties>
